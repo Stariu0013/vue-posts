@@ -12,22 +12,22 @@ export default {
     data() {
         return {
             post: {
-                title: '',
-                description: '',
+                title: "",
+                description: "",
             },
-        }
+        };
     },
     methods: {
         createPost() {
             this.post.id = new Date();
-            this.$emit('create', this.post);
+            this.$emit("create", this.post);
             this.post = {
-                title: '',
-                description: '',
+                title: "",
+                description: "",
             };
-        }
-    }
-}
+        },
+    },
+};
 </script>
 
 <style lang="scss" scoped>

@@ -7,8 +7,8 @@
 export default {
     props: {
         buttonText: {
-            type: String
-        }
+            type: String,
+        },
     },
     name: "custom-button",
 };

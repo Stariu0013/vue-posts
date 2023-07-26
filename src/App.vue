@@ -40,7 +40,7 @@ export default {
         },
         fetchPosts() {
             this.isPostsLoading = true;
-            fetch('https://jsonplaceholder.typicode.com/posts?_limit=10')
+            fetch("https://jsonplaceholder.typicode.com/posts?_limit=10")
                 .then(res => res.json())
                 .then(res => {
                     this.posts = res;
@@ -50,10 +50,10 @@ export default {
                 })
                 .finally(() => {
                     this.isPostsLoading = false;
-                })
-        }
+                });
+        },
     },
-}
+};
 </script>
 
 <style>

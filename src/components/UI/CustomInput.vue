@@ -12,7 +12,7 @@ export default {
             this.$emit("update:modelValue", event.target.value);
         },
     },
-}
+};
 </script>
 <style scoped>
 .input {

@@ -16,10 +16,10 @@ export default {
     },
     methods: {
         closeModal() {
-            this.$emit('update:isShowModal', false);
-        }
-    }
-}
+            this.$emit("update:isShowModal", false);
+        },
+    },
+};
 </script>
 
 <style>
