@@ -1,4 +1,6 @@
 <template>
+    <h1>Posts list</h1>
+    <custom-button class="new-post-button"  @click="this.$emit('openModal', true)">Create new post</custom-button>
     <custom-modal v-model:isShowModal="isShowModal">
         <post-form @create="createPost" />
     </custom-modal>

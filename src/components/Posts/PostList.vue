@@ -1,7 +1,5 @@
 <template>
     <div v-if="posts.length > 0">
-        <h1>Posts list</h1>
-        <custom-button class="new-post-button" @click="this.$emit('openModal', true)">Create new post</custom-button>
         <post-item v-for="post of posts" :post="post" :key="post.id" @removePost="this.$emit('removePost', post)" />
     </div>
     <h2 v-else class="no-posts-text">
