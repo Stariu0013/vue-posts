@@ -19,6 +19,7 @@ export default {
     padding: 10px;
     border: 1px solid teal;
     border-radius: 5px;
+    color: teal;
     outline: none;
     cursor: pointer;
 }

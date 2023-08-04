@@ -6,7 +6,7 @@
         </div>
 
         <div class="post_btns">
-            <custom-button>EDIT</custom-button>
+            <custom-button @click="$router.push(`/posts/${post.id}`)">Open</custom-button>
             <custom-button @click="this.$emit('removePost', post)">REMOVE</custom-button>
         </div>
     </div>
