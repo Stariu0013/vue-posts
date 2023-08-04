@@ -28,7 +28,7 @@
     <!--            {{ pageNumber }}-->
     <!--        </div>-->
     <!--    </div>-->
-    <div ref="observer" class="observer"></div>
+    <div v-intersection="loadMorePosts" class="observer"></div>
 </template>
 
 <script>
@@ -40,20 +40,6 @@ import axios from "axios";
 export default {
     mounted() {
         this.fetchPosts();
-
-        const options = {
-            rootMargin: "0px",
-            threshold: 1.0,
-        };
-
-        const callback = (entries) => {
-            if (entries[0].isIntersecting && this.currentPage < this.totalPagesCount) {
-                this.loadMorePosts();
-            }
-        };
-
-        const observer = new IntersectionObserver(callback, options);
-        observer.observe(this.$refs.observer);
     },
     data() {
         return {

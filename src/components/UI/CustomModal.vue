@@ -6,19 +6,11 @@
     </div>
 </template>
 <script>
+import toggleMixin from "@/mixins/toggleMixin";
+
 export default {
     name: "custom-modal",
-    props: {
-        isShowModal: {
-            type: Boolean,
-            default: false,
-        },
-    },
-    methods: {
-        closeModal() {
-            this.$emit("update:isShowModal", false);
-        },
-    },
+    mixins: [toggleMixin],
 };
 </script>
 
