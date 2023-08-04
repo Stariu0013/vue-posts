@@ -1,7 +1,7 @@
 <template>
     <form class="form" @submit.prevent>
         <custom-input class="input" type="text" placeholder="Title" v-model="post.title" />
-        <custom-input class="input" type="text" placeholder="Description" v-model="post.description" />
+        <custom-input class="input" type="text" placeholder="Description" v-model="post.body" />
 
         <custom-button @click="createPost">Add</custom-button>
     </form>
@@ -13,17 +13,17 @@ export default {
         return {
             post: {
                 title: "",
-                description: "",
+                body: "",
             },
         };
     },
     methods: {
         createPost() {
-            this.post.id = new Date();
+            this.post.id = Date.now();
             this.$emit("create", this.post);
             this.post = {
                 title: "",
-                description: "",
+                body: "",
             };
         },
     },
